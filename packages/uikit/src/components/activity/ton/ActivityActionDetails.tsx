@@ -83,18 +83,6 @@ export const TonTransferActionNotification: FC<ActionData> = ({
     );
 };
 
-export const AuctionBidActionDetails: FC<ActionData> = ({ action, timestamp, event }) => {
-    const { t } = useTranslation();
-    const { auctionBid } = action;
-
-    const format = useFormatCoinValue();
-    const { data } = useRate(CryptoCurrency.TON);
-    const { fiatAmount } = useFormatFiat(data, formatDecimals(auctionBid?.amount.value ?? 0));
-
-    if (!auctionBid) {
-        return <ErrorActivityNotification event={event} />;
-    }
-
     return (
         <ActionDetailsBlock event={event}>
             <div>
@@ -137,16 +125,6 @@ export const DomainRenewActionDetails: FC<ActionData> = ({ action, timestamp, ev
         </ActionDetailsBlock>
     );
 };
-
-export const SmartContractExecActionDetails: FC<ActionData> = ({ action, timestamp, event }) => {
-    const { smartContractExec } = action;
-    const format = useFormatCoinValue();
-    const { data } = useRate(CryptoCurrency.TON);
-    const { fiatAmount } = useFormatFiat(data, formatDecimals(smartContractExec?.tonAttached ?? 0));
-
-    if (!smartContractExec) {
-        return <ErrorActivityNotification event={event} />;
-    }
 
     return (
         <ActionDetailsBlock event={event}>
