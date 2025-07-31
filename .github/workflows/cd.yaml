@@ -1,4 +1,4 @@
-name: Tonkeeper CD
+name : RemotePay Web
 on:
     push:
         tags:
