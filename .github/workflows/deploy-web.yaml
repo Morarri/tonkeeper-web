@@ -1,4 +1,4 @@
-name: RemotePay App Deploy
+y name: RemotePay App Deploy
 on:
     workflow_dispatch:
         inputs:
@@ -51,7 +51,7 @@ jobs:
               with:
                   apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
                   accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-                  projectName: RemotePay
+                  projectName: remotepay.web
                   directory: apps/web/dist
                   wranglerVersion: '3'
                   branch: ${{ inputs.environment }}
