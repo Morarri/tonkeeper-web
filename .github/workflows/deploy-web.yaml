@@ -1,4 +1,4 @@
-name: Tonkeeper Web Deploy
+name: RemotePay App Deploy
 on:
     workflow_dispatch:
         inputs:
@@ -14,7 +14,7 @@ jobs:
     web-deploy:
         name: web-deploy
         runs-on: ubuntu-latest
-        timeout-minutes: 10
+        timeout-minutes: 5
 
         steps:
             - name: Checkout to git repository
@@ -51,7 +51,7 @@ jobs:
               with:
                   apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
                   accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-                  projectName: tonkeeper-web
+                  projectName: RemotePay
                   directory: apps/web/dist
                   wranglerVersion: '3'
                   branch: ${{ inputs.environment }}
