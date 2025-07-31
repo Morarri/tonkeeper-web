@@ -10,7 +10,7 @@ import {
 } from '../../../components/activity/ActivityIcons';
 import { useFormatCoinValue } from '../../../hooks/balance';
 import { useTranslation } from '../../../hooks/translation';
-import { FailedNote, ReceiveActivityAction, SendActivityAction } from '../ActivityActionLayout';
+import { ReceiveActivityAction, SendActivityAction } from '../ActivityActionLayout';
 import {
     AmountText,
     ColumnLayout,
@@ -83,27 +83,11 @@ const TonTransferAction: FC<{
             status={action.status}
         />
     );
-};
-
-export const SmartContractExecAction: FC<{
-    action: Action;
-    date: string;
-}> = ({ action, date }) => {
-    const { t } = useTranslation();
-    const { smartContractExec } = action;
-    const wallet = useActiveWallet();
-    const format = useFormatCoinValue();
-    const network = useActiveTonNetwork();
-
-    if (!smartContractExec) {
-        return <ErrorAction />;
-    }
 
     if (seeIfAddressEqual(smartContractExec.contract.address, wallet.rawAddress)) {
         return (
             <ListItemGrid>
                 <ActivityIcon status={action.status}>
-                    <ContractDeployIcon />
                 </ActivityIcon>
                 <ColumnLayout
                     title={t('transactions_smartcontract_exec')}
