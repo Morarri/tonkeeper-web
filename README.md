@@ -1,8 +1,8 @@
-# Tonkeeper Web Monorepo
+# RemotePay App
 
-Tonkeeper Web is a non-custodial crypto wallet and gateway to blockchain dApps.
+RemotePay is a non-custodial crypto wallet and gateway to blockchain dApps.
 
-Tonkeeper Extension supports Firefox 109.0 or higher version, Google Chrome, and Chromium-based
+RemotePay Extension supports Firefox 109.0 or higher version, Google Chrome, and Chromium-based
 browsers. We recommend using the latest available browser version.
 
 ## Building locally
