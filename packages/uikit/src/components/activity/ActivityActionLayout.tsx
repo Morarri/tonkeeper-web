@@ -4,8 +4,6 @@ import styled from 'styled-components';
 import { useTranslation } from '../../hooks/translation';
 import { Body2 } from '../Text';
 import {
-    ActivityIcon,
-    ContractDeployIcon,
     CreateWalletIcon,
     ReceiveIcon,
     SentIcon
@@ -102,46 +100,6 @@ export const ReceiveActivityAction: FC<{
     );
 };
 
-export const WalletDeployActivityAction: FC<{ address: string; date: string }> = ({
-    address,
-    date
-}) => {
-    const { t } = useTranslation();
-    return (
-        <ListItemGrid>
-            <ActivityIcon>
-                <CreateWalletIcon />
-            </ActivityIcon>
-            <ColumnLayout
-                title={t('transaction_type_wallet_initialized')}
-                entry="-"
-                address={address}
-                date={date}
-            />
-        </ListItemGrid>
-    );
-};
-
-export const ContractDeployActivityAction: FC<{ address: string; date: string }> = ({
-    address,
-    date
-}) => {
-    const { t } = useTranslation();
-
-    return (
-        <ListItemGrid>
-            <ActivityIcon>
-                <ContractDeployIcon />
-            </ActivityIcon>
-            <ColumnLayout
-                title={t('transaction_type_contract_deploy')}
-                entry="-"
-                address={address}
-                date={date}
-            />
-        </ListItemGrid>
-    );
-};
 
 const Wrapper = styled.div`
     grid-column: 2 / 3;
