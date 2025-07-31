@@ -1,9 +1,6 @@
-# Tonkeeper Web Monorepo
+# RemotePay 
 
-Tonkeeper Web is a non-custodial crypto wallet and gateway to blockchain dApps.
-
-Tonkeeper Extension supports Firefox 109.0 or higher version, Google Chrome, and Chromium-based
-browsers. We recommend using the latest available browser version.
+RemotePay Web is a non-custodial crypto wallet and gateway to blockchain dApps.
 
 ## Building locally
 
@@ -14,45 +11,7 @@ nvm use
 # Install `Yarn` version 4.0.2
 corepack enable
 ```
-
-### Build web script
-
-```sh
-# Install dependencies
-yarn
-
-# Build web app
-yarn build:web
-```
-
-Compressed build could be found in `/apps/web/build` once they're built.
-
-### Build extension script
-
-```sh
-# Install dependencies
-yarn
-
-# Build extension apps
-yarn build:extension
-```
-
-Compressed builds could be found in `/apps/extension/dist/chrome` and `/apps/extension/dist/firefox`
-once they're built.
-
-### Build desktop script
-
-```sh
-# Install dependencies
-yarn
-
-# Build desktop for current OS
-yarn build:desktop
-```
-
 Application for your platform could be found in `/apps/desktop/out` once they're built.
-
-#### Mac Environment variables:
 
 You can generate an App Store Connect API key to authenticate `notarytool` by going to the
 [App Store Connect](https://appstoreconnect.apple.com/access/api) access page and using the "Keys"
