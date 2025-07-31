@@ -2,7 +2,7 @@
     "name": "RemotePay/UK",
     "version": "0.1.0",
     "author": "RemotePay UK Limited <support@tonkeeper.com>",
-    "description": "UI Kit for tonkeeper wallet",
+    "description": "UI Kit for RemotePay wallet",
     "main": "dist/index.js",
     "types": "dist/index.d.ts",
     "scripts": {
