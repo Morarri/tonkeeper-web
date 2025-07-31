@@ -10,10 +10,7 @@ import { Body1, H2 } from '../Text';
 import {
     AddIcon,
     ImportIcon,
-    KeystoneIcon,
-    LedgerIcon,
     RightIcon,
-    SignerIcon,
     WatchOnlyIcon
 } from './ImportIcons';
 
